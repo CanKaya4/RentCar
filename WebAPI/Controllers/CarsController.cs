@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Abstract;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,13 +9,17 @@ namespace WebAPI.Controllers
     [ApiController]
     public class CarsController : ControllerBase
     {
+        ICarService _carService;
+
+        public CarsController(ICarService carService)
+        {
+            _carService = carService;
+        }
+
         public List<Car> GetAll()
         {
-            return new List<Car>
-            {
-                new Car { CarId = 10, BrandId = 1, Description = "iyi Araba" },
-                new Car { CarId = 11, BrandId = 2, Description = "Kötü Araba" },
-            };
+            var result = _carService.GetAll();
+            return result.Data;
         }
     }
 }
