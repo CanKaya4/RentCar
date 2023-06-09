@@ -18,5 +18,12 @@ namespace Business.Constants
         public static string CarGetByUnitPriceListed="Fiyatlara Göre Arabalar Listelendi";
         public static string CarGetCarDetailsListed="Arabanın Detayları Listelendi";
         public static string MaintenanceTime = "Sistem Bakım Saati.";
+        internal static string CustomerAdded="Müşteri Eklendi";
+        internal static string CustomerListed ="Müşteri Listelendi";
+        internal static string CompanyNameInValid="Şirket İsmi 5'den Büyük Olmalıdır.";
+        internal static string RentalAdded;
+        internal static string RentalReturnDateNull;
+        internal static string RentalDeleted;
+        internal static string RentalCarById;
     }
 }

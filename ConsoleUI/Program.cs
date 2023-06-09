@@ -1,5 +1,6 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 
 //CarDtoTest();
 
@@ -7,7 +8,23 @@ using DataAccess.Concrete.EntityFramework;
 
 //BrandTest();
 
-CarTest();
+//CarTest();
+
+//CustomerListedTest();
+
+//CustomerTest();
+
+RentalTest();
+
+RentalManager rentalManager = new RentalManager(new EfRentalDal());
+var result1 = rentalManager.Add(new Rental
+{
+    CarId = 8,
+    CustomerId = 1,
+    RentDate = DateTime.Now,
+    ReturnDate = DateTime.Now,
+});
+Console.WriteLine(result1.Message);
 static void ColorTest()
 {
     ColorManager colorManager = new ColorManager(new EfColorDal());
@@ -41,7 +58,7 @@ static void CarTest()
     {
         Console.WriteLine(result.Message);
     }
-   
+
 }
 
 static void CarDtoTest()
@@ -50,5 +67,32 @@ static void CarDtoTest()
     foreach (var item in carManager.GetCarDetails().Data)
     {
         Console.WriteLine(item.CarId + "||" + item.ColorName);
+    }
+}
+
+static void CustomerListedTest()
+{
+    CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+    foreach (var item in customerManager.GetAll().Data)
+    {
+        Console.WriteLine(item.CompanyName);
+    }
+}
+
+static void CustomerTest()
+{
+    CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+    foreach (var item in customerManager.GetAll().Data)
+    {
+        Console.WriteLine(item.CompanyName);
+    }
+}
+
+static void RentalTest()
+{
+    RentalManager rentalManager = new RentalManager(new EfRentalDal());
+    foreach (var item in rentalManager.GetAll().Data)
+    {
+        Console.WriteLine(item.RentDate);
     }
 }
