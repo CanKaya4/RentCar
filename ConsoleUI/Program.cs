@@ -1,13 +1,13 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
 
-CarDtoTest();
+//CarDtoTest();
 
 //ColorTest();
 
 //BrandTest();
 
-//CarTest();
+CarTest();
 static void ColorTest()
 {
     ColorManager colorManager = new ColorManager(new EfColorDal());
@@ -29,16 +29,25 @@ static void BrandTest()
 static void CarTest()
 {
     CarManager carManager = new CarManager(new EfCarDal());
-    foreach (var item in carManager.GetAll())
+    var result = carManager.GetAll();
+    if (result.Success == true)
     {
-        Console.WriteLine("Araba Açıklaması \n" + item.Description);
+        foreach (var item in carManager.GetAll().Data)
+        {
+            Console.WriteLine("Araba Açıklaması \n" + item.Description);
+        }
     }
+    else
+    {
+        Console.WriteLine(result.Message);
+    }
+   
 }
 
 static void CarDtoTest()
 {
     CarManager carManager = new CarManager(new EfCarDal());
-    foreach (var item in carManager.GetCarDetails())
+    foreach (var item in carManager.GetCarDetails().Data)
     {
         Console.WriteLine(item.CarId + "||" + item.ColorName);
     }

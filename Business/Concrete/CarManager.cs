@@ -34,32 +34,36 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetAll()
         {
-            return new DataResult(_carDal.GetAll());
+            if (DateTime.Now.Hour == 5)
+            {
+                return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
+            }
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.CarGetAllListed);
         }
 
         public IDataResult<List<Car>> GetAllByBrand(int brandId)
         {
-            return new DataResult(_carDal.GetAll(c => c.BrandId == brandId));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == brandId),Messages.CarGetAllByBrandListed);
         }
 
         public IDataResult<List<Car>> GetAllByColor(int colorId)
         {
-            return new DataResult(_carDal.GetAll(c => c.ColorId == colorId));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == colorId),Messages.CarGetByColor);
         }
 
         public IDataResult<Car> GetById(int carId)
         {
-            return new DataResult(_carDal.Get(c => c.CarId == carId));
+            return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == carId),Messages.CarGetByIdListed);
         }
 
         public IDataResult<List<Car>> GetByUnitPrice(decimal min, decimal max)
         {
-            return new DataResult(_carDal.GetAll(c => c.DailyPrice >= min && c.DailyPrice <= max));
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.DailyPrice >= min && c.DailyPrice <= max),Messages.CarGetByUnitPriceListed);
         }
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            return new DataResult(_carDal.GetCarDetails());
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(),Messages.CarGetCarDetailsListed);
         }
     }
 }
