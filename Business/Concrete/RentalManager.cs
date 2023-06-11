@@ -42,7 +42,7 @@ namespace Business.Concrete
             {
                 return new ErrorDataResult<List<Rental>>(Messages.MaintenanceTime);
             }
-            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
+            return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll(),Messages.RentalListed);
         }
 
         public IDataResult<List<Rental>> GetById(int id)

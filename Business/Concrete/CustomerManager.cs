@@ -26,10 +26,16 @@ namespace Business.Concrete
             {
                 return new ErrorResult(Messages.CompanyNameInValid);
             }
+            _customerDal.Add(customer);
             return new SuccessResult(Messages.CustomerAdded);
+        }     
+
+        IDataResult<Customer> ICustomerService.Get(int id)
+        {
+            return new SuccessDataResult<Customer>(_customerDal.Get(c=>c.Id == id),Messages.CustomerIdListed);
         }
 
-        public IDataResult<List<Customer>> GetAll()
+        IDataResult<List<Customer>> ICustomerService.GetAll()
         {
             return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(),Messages.CustomerListed);
         }
