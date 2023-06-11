@@ -30,10 +30,12 @@ namespace Business.Constants
         public static string UserIdListed = "Kullancı Id'ye Göre Listelendi";
         public static string UserUpdated = "Kullanıcı Güncellendi";
         public static string UserListed = "Kullanıcılar Listelendi";
-        internal static string ColorsListed="Renkler Listelendi";
-        internal static string BrandsListed="Markalar Listelendi.";
-        internal static string UserAdded="Kullanıcı Başarıyla Eklendi";
-        internal static string CustomerIdListed="Müşteri Id'ye Göre Listelendi";
-        internal static string RentalListed="Kiralamalar Listelendi";
+        public static string ColorsListed="Renkler Listelendi";
+        public static string BrandsListed="Markalar Listelendi.";
+        public static string UserAdded="Kullanıcı Başarıyla Eklendi";
+        public static string CustomerIdListed="Müşteri Id'ye Göre Listelendi";
+        public static string RentalListed="Kiralamalar Listelendi";
+        public static string BrandAdded="Marka Eklendi";
+        public static string ColorAdded="Renk Eklendi";
     }
 }

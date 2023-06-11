@@ -2,6 +2,15 @@
 //using DataAccess.Concrete.EntityFramework;
 //using Entities.Concrete;
 
+using System.Security.Cryptography;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+
+    }
+}
 ////CarDtoTest();
 
 ////ColorTest();
