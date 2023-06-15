@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Entities.Concrete;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,16 +16,16 @@ namespace WebAPI.Controllers
         {
             _userService = userService;
         }
-        [HttpGet("getall")]
-        public IActionResult GetAll()
-        {
-            var result = _userService.GetAll();
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
+        //[HttpGet("getall")]
+        //public IActionResult GetAll()
+        //{
+        //    var result = _userService.GetAll();
+        //    if (result.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+        //    return BadRequest(result);
+        //}
         [HttpPost("add")]
         public IActionResult Add(User user)
         {
