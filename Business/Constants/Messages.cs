@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Entities.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,5 +38,11 @@ namespace Business.Constants
         public static string RentalListed="Kiralamalar Listelendi";
         public static string BrandAdded="Marka Eklendi";
         public static string ColorAdded="Renk Eklendi";
+        public static string UserNotFound ="Kullanıcı bulunamadı";
+        public static string SuccessfulLogin="Giriş Başarılı";
+        public static string PasswordError="Şifre Hatalı";
+        public static string UserAlreadyExits="Kullanıcı Zaten Var";
+        public static string UserRegistered="Kullanıcı başarıyla kayıt edildi.";
+        public static string AccessTokenCreate="Access Token Oluşturuldu.";
     }
 }
