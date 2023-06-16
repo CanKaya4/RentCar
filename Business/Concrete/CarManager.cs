@@ -1,9 +1,13 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constants;
 using Business.ValidationRules;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac;
+using Core.Aspects.Caching;
+using Core.Aspects.Performance;
 using Core.CrossCuttingConcerns;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -24,13 +28,15 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
+        [SecuredOperation("admin.add,admin")]
         [ValidationAspect(typeof(CarValidator))]
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IResult Add(Car car)
         {
-           
-             _carDal.Add(car);
+            _carDal.Add(car);
             return new SuccessResult(Messages.CarAdded);
-            
+
         }
 
         public IDataResult<List<Car>> GetAll()
@@ -51,7 +57,8 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == colorId),Messages.CarGetByColor);
         }
-
+        [CacheAspect]
+        [PerformanceAspect(5)]
         public IDataResult<Car> GetById(int carId)
         {
             return new SuccessDataResult<Car>(_carDal.Get(c => c.CarId == carId),Messages.CarGetByIdListed);
@@ -66,5 +73,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(),Messages.CarGetCarDetailsListed);
         }
+      
+      
     }
 }

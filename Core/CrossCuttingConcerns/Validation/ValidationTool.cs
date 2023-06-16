@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.CrossCuttingConcerns
+namespace Core.CrossCuttingConcerns.Validation
 {
     public static class ValidationTool
     {

@@ -44,5 +44,6 @@ namespace Business.Constants
         public static string UserAlreadyExits="Kullanıcı Zaten Var";
         public static string UserRegistered="Kullanıcı başarıyla kayıt edildi.";
         public static string AccessTokenCreate="Access Token Oluşturuldu.";
+        public static string AuthorizationDenied="Yetkiniz yok";
     }
 }
