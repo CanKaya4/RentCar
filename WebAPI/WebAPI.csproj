@@ -7,6 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\DefaultImage.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\15af7208-bb0c-420a-95ea-ea53a914ad50.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\2930cdf5-568d-4fa0-b092-5ae8dc3e2745.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\2f32fd5e-eee0-4729-abee-e57526256df3.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\3757a93b-9645-4ba6-9acf-d6582290cf03.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\471aab71-c998-4897-9039-8e01d69211a0.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\4bbe6b5b-0bd3-47f6-9237-769563230986.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\56813415-3b03-42da-b6a5-45a11dead27e.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\76a7103b-c29f-45fa-a2c3-8cd6f8804821.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\88c4da3e-4a70-4bf4-8aab-890d6416f180.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\a024a9ad-1c77-4bec-9786-b541deff8c1e.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\a3ac1c74-ce10-481a-9140-9871974c5428.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\b0af7c4b-5aa8-40de-8df8-1dfb991a7235.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\b4f97391-c152-4b83-ad67-d3d6e79bc810.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\b666a4d6-5873-493d-b60c-0756e5d30978.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\bb19e52f-2bf2-4e32-8abf-828fe734ab73.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\c2754989-03ff-42de-95d2-c9560c5423d5.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\d616e9f5-d433-4913-abaa-57120b120957.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\d9366138-24f8-42b5-ad16-212dd0b64799.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\db571529-4b7f-4fb6-9574-494eb92e415f.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\DefaultImage.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\f7e532f9-2bbc-4632-aa8a-cae984dd0fd5.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\f85faa1f-9e1f-413b-8299-83e3a8bae87a.jpg" />
+    <None Include="wwwroot\Uploads\CarImages\fa20c583-4eb2-4ea6-a6e6-3931d26a8e0b.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />

@@ -45,5 +45,13 @@ namespace Business.Constants
         public static string UserRegistered="Kullanıcı başarıyla kayıt edildi.";
         public static string AccessTokenCreate="Access Token Oluşturuldu.";
         public static string AuthorizationDenied="Yetkiniz yok";
+        internal static string ImageAdded;
+        internal static string ImagesListedById;
+        internal static string ImagesListed;
+        internal static string CarImageDeleted;
+        internal static string ImageUpdated;
+        internal static string CarImageLimitReached;
+        internal static string CarImageAlreadyHave;
+        internal static string ImagesListedByCarId;
     }
 }

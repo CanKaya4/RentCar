@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Abstract
 {
+    //CarImage is generic and it will use as a entity...
     public interface ICarImageDal : IEntityRepository<CarImage>
     {
     }
